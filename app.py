@@ -23,8 +23,9 @@ def text_output():
 
     text = request.args.get('text')
     org_text=text
-    svc_model = pickle.load(open("D:/Hackathon/svc_model_new.dat", "rb"))
-    tfidf_vectorizer = pickle.load(open("D:/Hackathon/feature_vectorizer_new.pickle", "rb"))
+    #/assets/header1.css
+    svc_model = pickle.load(open("svc_model_new.dat", "rb"))
+    tfidf_vectorizer = pickle.load(open("feature_vectorizer_new.pickle", "rb"))
 
     # PREPROCESSING OF CONVERTED TEXT
     stop_words = ["xxxx", "xxxxxxxx", "the", "when", "get", "told", "got", "one", "they", "even", "asked", "she", "i",
@@ -38,7 +39,7 @@ def text_output():
                   'm', 'by', 'such', 'will', 'each', 'while', 'me', 'when', "you'd", 'these', 'it', 'just', 'than',
                   'or', 'having', 'itself', 'too', 'now', 'on', 'himself', 'down', 'so', 'but', "it's", 'its', 'whom',
                   'shan', 'and', 'being', 'herself', 'ma', 'over', 'll', 'are', 've', 'off', 'has', 'both', 'does',
-                  'he', 'against', 'then', 'yours', 'all', 'during', 'under', 'this', 'above', 'their', 'am',
+                  'he', 'against', 'then', 'yours', 'all', 'during', 'under', 'this', 'above', 'their', 'am',          
                   "should've", 'a', 'more', 'of', 'had', 'were', 'because', "you've", 'they', "you're", 'if', 'can']
     stop = set(stop_words)
     queri = [text]
