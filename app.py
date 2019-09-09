@@ -39,7 +39,7 @@ def text_output():
                   'm', 'by', 'such', 'will', 'each', 'while', 'me', 'when', "you'd", 'these', 'it', 'just', 'than',
                   'or', 'having', 'itself', 'too', 'now', 'on', 'himself', 'down', 'so', 'but', "it's", 'its', 'whom',
                   'shan', 'and', 'being', 'herself', 'ma', 'over', 'll', 'are', 've', 'off', 'has', 'both', 'does',
-                  'he', 'against', 'then', 'yours', 'all', 'during', 'under', 'this', 'above', 'their', 'am',          
+                  'he', 'against', 'then', 'yours', 'all', 'during', 'under', 'this', 'above', 'their', 'am',
                   "should've", 'a', 'more', 'of', 'had', 'were', 'because', "you've", 'they', "you're", 'if', 'can']
     stop = set(stop_words)
     queri = [text]
@@ -74,23 +74,23 @@ def text_output():
 
     global dept
     if department == 0:
-        dept="DEBT COLLECTION"
+        dept="DEBT COLLECTION SUPPORT TEAM"
     elif department == 1:
-        dept="MORTGAGE"
+        dept="MORTGAGE SUPPORT TEAM"
     elif department == 2:
-        dept="CREDIT REPORTING"
+        dept="CREDIT REPORTING SUPPORT TEAM"
     elif department == 3:
-        dept="CREDIT CARD"
+        dept="CREDIT CARD SUPPORT TEAM"
     elif department == 4:
-        dept="BANK ACCOUNT OR SERVICE"
+        dept="BANK ACCOUNT OR SERVICE SUPPORT TEAM"
     elif department == 5:
-        dept="STUDENT LOAN"
+        dept="STUDENT LOAN SUPPORT TEAM"
     elif department == 6:
-        dept="CONSUMER LOAN"
+        dept="CONSUMER LOAN SUPPORT TEAM"
     elif department == 7:
-        dept="PAYDAY LOAN"
+        dept="PAYDAY LOAN SUPPORT TEAM"
     else:
-        dept="MONEY TRANSFERS"
+        dept="MONEY TRANSFERS SUPPORT TEAM"
 
     return render_template('ouput.html', text = org_text,dept=dept)
 

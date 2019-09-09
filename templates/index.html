@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page2</title>
+  <title>Voice recognition</title>
   <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Title</title>
+
     <link rel="stylesheet" href="1.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <style>
+body{
+    background-image:url("/static/test_1.jpg");
+    background-size:cover;
+    }
     #sub_mit{
     color:blue;
     }
+    #title{
+    color:#FFFFFF;
+    }
+    #region{
+    color:#FFFFFF;
+    }
+    #result{
+    color:#FFFFFF;
+    }
 </style>
-<script src="/static/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
 </head>
 <body style="font-family:verdana; font-size:20px;" bgcolor="#FEF9E7 ">
   <div id="warning">
     <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
   </div>
-
+<font color="#FFFFFF" style="bottom:0; position: fixed;" size="5" id="h4">4horsemen.in</font>
   <div id="content" style="display:none">
      <form action="{{url_for('text_output')}}">
     <table width="100%">
 
       <tr><td></td>
-        <td><h1 style="font-weight:500;">Click on 'Start recognition' to begin the recording</h1></td>
+        <td><h2 id="title" style="font-weight:500;">Click on 'Start recognition' to begin the recording</h2></td>
       </tr>
       <tr>
         <td align="right"><a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started" target="_blank">Subscription</a>:</td>
-        <td><input id="subscriptionKey" type="text" size="40" value="20582f292cc943db8793595596230717"></td>
+        <td><input  id="subscriptionKey" type="text" size="30" value="20582f292cc943db8793595596230717"></td>
       </tr>
       <tr>
-        <td align="right">Region</td>
-        <td><input id="serviceRegion" type="text" size="40" value="westus"></td>
+        <td id="region" align="right">Region</td>
+        <td><input id="serviceRegion" type="text" size="30" value="westus"></td>
       </tr>
       <tr>
         <td></td>
         <td><button id="startRecognizeOnceAsyncButton">Start recognition</button></td>
       </tr>
       <tr>
-        <td align="right" valign="top">Results</td>
+        <td id="result" align="right" valign="top">Results</td>
         <td><textarea name="text" id="phraseDiv" style="display: inline-block;width:700px;height:100px"></textarea></td>
       </tr>
 
@@ -50,7 +62,8 @@
 
     </table>
 
-         <center><input id="sub_mit" type="submit" value="Submit response"></center>
+       <center><input id="sub_mit" type="submit" value="Submit response"></center>
+
 
          </form>
 

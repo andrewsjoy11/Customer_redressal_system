@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Page1</title>
-    <link rel="stylesheet" href="/static/1.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<style>
-    body{
-    background-image:url("/static/bank8.png");
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+     body{
+    background-image:url("/static/test_1.jpg");
     background-size:cover;
     }
-    .container-fluid{
-    margin-top:0px;
-     background-color: #707B7C;
-     color: white;
-
-     }
-     #eg_text{
-     color:white;
-     }
-     a:link{
-     text-decoration:underline;
-     color:#FFFFFF;
-     }
-     #title{
-     color:#FFCD00;
-     }
-     #h3{
-     color:black;}
-</style>
+    #title{
+    color:#FFFFFF;
+    }
+    #eg_text{
+    color:#FFFFFF;}
+    #h4{
+    color:#FFFFFF;
+    }
+    .list-group{
+    color:#FFFFFF;}
+    </style>
 </head>
-
-
 <body>
-<center>
-<div class="jumbotron jumbotron-fluid">
-    <div class="container-fluid" >
-    <center><h2 id="title" style="font-family:verdana;">VOICE BASED CUSTOMER GRIEVANCE REDRESSAL SYSTEM</h2></center>
-        <center><h2 id="eg_text" style="font-family:verdana;">Are you ready for recording your voice?</h2>
-    <a href="{{url_for('input')}}"  style="font-size:20px;">CLICK HERE</a>
 
-        </center></div></div>
-</center>
-    <!--<div class="img1">-->
-<!--    <img src="/static/bank7.jpg" class="center">-->
-<!--</div>-->
-<!--    <h3 id="h3" style="position: fixed; bottom: 0; width:100%; font-family:verdana; text-align: center">BY:4 HORSEMAN</h3>-->
+ <center><h2 id="title" style="font-family:verdana;">VOICE BASED CUSTOMER GRIEVANCE REDRESSAL SYSTEM</h2></center>
+ <center><h2 id="eg_text" style="font-family:verdana;">Can you tell us your query?</h2>
+     <a href="{{url_for('input')}}"  style="font-size:20px;">CLICK HERE TO TELL US YOUR QUERY</a></center>
+ <br>
+ <font style="bottom:0; position: fixed;" size="5" id="h4">4horsemen.in</font>
+
+ <div style="position:fixed; right:0;">
+     <font size="5" color="#FFFFFF">Available support teams are:   </font>
+ <br>
+ <ul class="list-group">
+  <li class="list-group-item active">DEBT COLLECTION</li>
+     <br>
+  <li class="list-group-item">MORTGAGE</li>
+     <br>
+  <li class="list-group-item">CREDIT REPORTING</li>
+<br>
+  <li class="list-group-item">CREDIT CARD</li>
+  <br>
+     <li class="list-group-item">BANK ACCOUNT OR SERVICE</li>
+     <br>
+     <li class="list-group-item">STUDENT LOAN</li>
+     <br>
+              <li class="list-group-item">CONSUMER LOAN</li>
+     <br>
+              <li class="list-group-item">PAYDAY LOAN</li>
+     <br>
+              <li class="list-group-item">MONEY TRANSFERS</li>
+</ul>
+ </div>
 </body>
 </html>
