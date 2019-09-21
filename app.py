@@ -92,7 +92,7 @@ def text_output():
     else:
         dept="MONEY TRANSFERS SUPPORT TEAM"
 
-    return render_template('ouput.html', text = org_text,dept=dept)
+    return {"dept": dept, "org_text": org_text}
 
 
 
